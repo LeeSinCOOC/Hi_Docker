@@ -18,7 +18,6 @@ while 1:
 
     cv.putText(img_array,text,(origin_x,origin_y),font_face,font_scale,(255,255,255),thickness,8,0)
 
-    cv.imwrite(save_path+str(time.time())+'.jpg',img_array)
+    cv.imwrite(save_path+str(time.time())+'.jpg',img_array,[int(cv.IMWRITE_JPEG_QUALITY),50])
 
     time.sleep(1)
-
